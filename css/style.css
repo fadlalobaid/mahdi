@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Reem+Kufi:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Reem+Kufi:wght@400..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+:root {
+    --main-back: #2d1e17;
+    --main-font: #9d8a7c;
+    --main-color: 796254;
+    --main-black: black;
+    --main-white: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    /* لازم نصفرهن بكل مشروع */
+    box-sizing: border-box;
+}
+body {
+    font-family: cairo;
+    direction: rtl;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+ul li {
+    list-style: none;
+}
+/* li a{
+    text-decoration: none;
+ } */
+.contianer {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+header {
+    height: 72px;
+    color: var(--main-font);
+    background-color: var(--main-back);
+}
+header .contianer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .contianer img {
+    color: black;
+    mix-blend-mode: lighten;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+header .contianer nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header .contianer nav ul {
+    display: flex;
+    /* align-items: center; */
+}
+
+.nav-tog:hover + ul {
+    background-color: #eee;
+    display: flex;
+    flex-direction: column; /*يظهر بشكل عمودي*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+header .contianer nav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 20px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--main-font);
+    transition: 0.3s;
+}
+
+
+header .contianer nav ul li a.active,
+header .contianer nav ul li a:hover {
+    color: var(--main-white);
+    border-bottom: 3px solid var(--main-white);
+    text-shadow: 0 0 10px var(--main-white);
+}
+header .contianer .social {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .contianer .social i {
+    margin: 5px;
+    font-size: 30px;
+    display: flex;
+    color: var(--main-back);
+    background-color: var(--main-font);
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    cursor: pointe100;
+}
+header .contianer .social:hover > :not(:hover) {
+    scale: 0.9;
+    color: var(--main-font);
+    background-color: var(--main-back);
+    text-shadow: 0 0 10px var(--main-font);
+}
+/* end header */
+/* start hero */
+.hero {
+    margin: 10px;
+    padding: 20px;
+}
+.hero .contianer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero .contianer .hero-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--main-back);
+}
+.hero .contianer .social {
+    display: flex;
+    justify-content: center;
+}
+.hero .contianer .social i {
+    margin: 5px;
+    font-size: 30px;
+    display: flex;
+    color: var(--main-back);
+    background-color: var(--main-font);
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.hero .contianer .social:hover > :not(:hover) {
+    scale: 0.9;
+    color: var(--main-font);
+    background-color: var(--main-back);
+    text-shadow: 0 0 10px var(--main-font);
+}
+
+.hero .contianer .call {
+    display: flex;
+    justify-content: center;
+}
+.hero .contianer .call button {
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: var(--main-back);
+    color: var(--main-font);
+    border-radius: 7px;
+    font-size: 25px;
+}
+.contianer .itemes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+.contianer .itemes .item {
+    width: 250px;
+    height: 300px;
+    padding: 5px;
+    border: 1px saddlebrown solid;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px #2d1e17;
+    transition: 0.3 ease-in-out;
+}
+.contianer .itemes .item:hover {
+    transform: scale(1.1);
+}
+.contianer .itemes .item img {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    box-shadow: 0 0 15px #2d1e17;
+}
+.contianer .itemes .item .progress-bar {
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 0 0 15px #2d1e17;
+}
+
+footer {
+    background-color: var(--main-back);
+    color: var(--main-font);
+    padding: 10px 0;
+    margin-top: auto; /* التعديل الأساسي هنا */
+    width: 100%;
+    border-top: 2px solid rgba(157, 138, 124, 0.2); /* إضافة اختيارية */
+}
+footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+footer ul li a:hover {
+    border: 3px solid var(--main-color);
+}
+footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+footer h2 {
+    color: white;
+    text-align: center;
+}
