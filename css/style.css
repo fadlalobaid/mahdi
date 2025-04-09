@@ -346,14 +346,45 @@ footer h2 {
         grid-template-columns: repeat(4, 1fr);
         gap: 3rem;
     }
+    .contianer .itemes .item {
+        width: 95px;
+        height: 105px;
+        transition: 0.3 ease-in-out;
+    }
+    .contianer .itemes .item h2{
+        font-size: 12px;
+    }
+    .contianer .itemes .item img {
+        width: 50px;
+        height: 50px;
+    }
+    .contianer .itemes .item .progress-bar {
+        font-size: 10px;
+    }
+
 
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
 
     .contianer .itemes {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
+    }
+    .contianer .itemes .item {
+        width: 85px;
+        height: 90px;
+        transition: 0.3 ease-in-out;
+    }
+    .contianer .itemes .item h2{
+        font-size: 10px;
+    }
+    .contianer .itemes .item img {
+        width: 45px;
+        height: 45px;
+    }
+    .contianer .itemes .item .progress-bar {
+        font-size: 10px;
     }
 
 }
